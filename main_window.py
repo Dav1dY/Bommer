@@ -290,7 +290,7 @@ class Ui_Main_Window(object):
         self.exitButton.setObjectName("exitButton")
 
         self.retranslateUi(Main_Window)
-        self.Main_stackedWidget.setCurrentIndex(3)
+        self.Main_stackedWidget.setCurrentIndex(0)
         self.module_stackedWidget.setCurrentIndex(0)
         self.station_stackedWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(Main_Window)
