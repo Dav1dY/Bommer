@@ -1,57 +1,1023 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>Main_Window</class>
+ <widget class="QWidget" name="Main_Window">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>796</width>
+    <height>622</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QStackedWidget" name="stackedWidget">
+  <widget class="QStackedWidget" name="Main_stackedWidget">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>20</y>
-     <width>351</width>
-     <height>251</height>
+     <x>10</x>
+     <y>10</y>
+     <width>771</width>
+     <height>571</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="MainPage">
-    <widget class="QPushButton" name="submitButton">
+    <widget class="QPushButton" name="jump2partPage_Button">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>200</x>
        <y>20</y>
        <width>75</width>
        <height>23</height>
       </rect>
      </property>
      <property name="text">
-      <string>Submit</string>
+      <string>Parts</string>
      </property>
     </widget>
-   </widget>
-   <widget class="QWidget" name="SubmitPage">
-    <widget class="QPushButton" name="backButton">
+    <widget class="QPushButton" name="jump2modulePage_Button">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>200</y>
+       <x>110</x>
+       <y>20</y>
        <width>75</width>
        <height>23</height>
       </rect>
      </property>
      <property name="text">
-      <string>Back</string>
+      <string>Module</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="jump2stationPage_Button">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Station</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="PartPage">
+    <widget class="QPushButton" name="back2mainPage_Button_2">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>540</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Main</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="part_name_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>20</y>
+       <width>113</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="partname_label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>名稱</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="part_spec_label">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>20</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>型號</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="part_spec_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>20</y>
+       <width>113</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="part_category_label">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>20</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>類別</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="part_category_comboBox">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>20</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>所有</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>傳感器元件</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>氣動元件</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="search_part_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>20</y>
+       <width>51</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Search</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="new_part_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>60</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>New</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="part_tableView">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>671</width>
+       <height>511</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QHeaderView::section {
+	text-align: center;
+}</string>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+    <widget class="QPushButton" name="remove_part_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>220</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Remove</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="part_savechange_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>180</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="edit_part_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>100</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Edit</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="part_cancalEdit_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>140</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="ModulePage">
+    <widget class="QPushButton" name="back2mainPage_Button_1">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>540</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Main</string>
+     </property>
+    </widget>
+    <widget class="QStackedWidget" name="module_stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>731</width>
+       <height>511</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="module_search_page">
+      <widget class="QLabel" name="module_name_label_1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>53</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>模組名稱</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="module_name_lineEdit_1">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>10</y>
+         <width>113</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="module_belonging_label_1">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>10</y>
+         <width>53</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>模組歸屬</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="module_belonging_comboBox_1">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>10</y>
+         <width>81</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>All</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Conveyor</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Robot</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Modbus</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="module_search_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>10</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+      <widget class="QTableView" name="module_search_tableView">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>701</width>
+         <height>431</height>
+        </rect>
+       </property>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+      </widget>
+      <widget class="QPushButton" name="module_view_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>480</y>
+         <width>111</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>View Module</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="module_newModule_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>10</y>
+         <width>101</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>New Module</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="module_removeModule_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>480</y>
+         <width>81</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Remove</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="module_saveModule_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>10</y>
+         <width>71</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="module_cancelModule_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>10</y>
+         <width>71</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="module_view_page">
+      <widget class="QLabel" name="module_name_label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>53</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>模組名稱</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="module_name_lineEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>10</y>
+         <width>113</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="module_belonging_label_2">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>10</y>
+         <width>53</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>模組歸屬</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="module_belonging_comboBox_2">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>10</y>
+         <width>81</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Conveyor</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Robot</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Modbus</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QTableView" name="module_content_tableView">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>641</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+      </widget>
+      <widget class="QLineEdit" name="module_part_name_lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>240</y>
+         <width>113</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="module_part_spec_label">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>240</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>型號</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="module_part_category_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>240</y>
+         <width>111</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>所有</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>傳感器元件</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>氣動元件</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="module_part_category_label">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>240</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>類別</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="module_part_name_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>240</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>名稱</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="module_part_spec_lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>240</y>
+         <width>113</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="module_searchPart_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>240</y>
+         <width>51</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+      <widget class="QTableView" name="module_searchPart_tableView">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>271</y>
+         <width>641</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+      </widget>
+      <widget class="QPushButton" name="module_addPart_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>270</y>
+         <width>61</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Add</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="module_removePart_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>40</y>
+         <width>61</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Remove</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="module_save_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>480</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="module_return_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>480</y>
+         <width>61</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Return</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="StationPage">
+    <widget class="QStackedWidget" name="station_stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>731</width>
+       <height>511</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="search_station_page">
+      <widget class="QLabel" name="station_name_label_1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>53</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>站位名稱</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="station_name_lineEdit_1">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>10</y>
+         <width>113</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="station_search_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>10</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="view_station_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>480</y>
+         <width>111</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>View Station</string>
+       </property>
+      </widget>
+      <widget class="QTableView" name="station_search_tableView">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>701</width>
+         <height>431</height>
+        </rect>
+       </property>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+      </widget>
+      <widget class="QPushButton" name="station_newStation_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>10</y>
+         <width>101</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>New Station</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="station_removeStation_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>480</y>
+         <width>71</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Remove</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="station_saveStation_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>10</y>
+         <width>71</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="station_cancelStation_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>10</y>
+         <width>71</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="view_station_page">
+      <widget class="QLabel" name="station_name_label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>53</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>站位名稱</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="station_name_lineEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>10</y>
+         <width>113</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QTableView" name="station_content_tableView">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>631</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+      </widget>
+      <widget class="QLineEdit" name="station_module_name_lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>230</y>
+         <width>113</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="station_module_belonging_label">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>230</y>
+         <width>31</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>歸屬</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="station_module_name_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>230</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>模組名稱</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="station_module_search_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>230</y>
+         <width>51</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+      <widget class="QTableView" name="station_search_module_tableView">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>261</y>
+         <width>631</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+      </widget>
+      <widget class="QPushButton" name="station_add_module_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>260</y>
+         <width>61</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Add</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="station_remove_module_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>40</y>
+         <width>61</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Remove</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="station_save_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>480</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="station_module_belonging_comboBox">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>230</y>
+         <width>81</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Conveyor</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Robot</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Modbus</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QPushButton" name="station_return_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>650</x>
+         <y>480</y>
+         <width>61</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Return</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>10</y>
+         <width>101</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Station Details</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page"/>
+    </widget>
+    <widget class="QPushButton" name="back2mainPage_Button_3">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>540</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Main</string>
      </property>
     </widget>
    </widget>
@@ -59,8 +1025,8 @@
   <widget class="QPushButton" name="exitButton">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>270</y>
+     <x>700</x>
+     <y>590</y>
      <width>75</width>
      <height>23</height>
     </rect>
