@@ -164,6 +164,7 @@ class MainWindow(QtWidgets.QWidget):
 
         # station p2
         self.station_content_tableView.horizontalHeader().setDefaultAlignment(Qt.AlignmentFlag.AlignLeft)
+
         # self.station_content_tableView.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
         self.station_content_tableView.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
         self.station_content_tableView.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
